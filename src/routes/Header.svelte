@@ -3,13 +3,13 @@ import Logo from '../lib/IMG/MarketWeb.png';
 </script>
 <header class="contenedor">
     <div class="logo">
-        <img src={Logo} alt="">   
+        <a href="/"><img src={Logo} alt=""></a>   
     </div>
     <i class="fa-solid fa-user"></i>
     <div class="boton">
-        <button>Quenes somos</button>
-        <button>Planes</button>
-        <button>Misión y Visón</button>
+        <button><a href="/quesomos">Quienes somos</a></button>
+        <button><a href="/planes">Planes</a></button>
+        <button><a href="/mision">Misión y Visón</a></button>
     </div>
     <div class="menu">
     
@@ -64,6 +64,11 @@ import Logo from '../lib/IMG/MarketWeb.png';
         background: transparent;
         border-radius:50px;
         border: solid 0.5px #628C88;
+        color: #628C88;
+    }
+    a
+    {
+        text-decoration: none;
         color: #628C88;
     }
     button:hover
