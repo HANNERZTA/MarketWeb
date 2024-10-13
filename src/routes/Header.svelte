@@ -1,11 +1,24 @@
 <script>
 import Logo from '../lib/IMG/MarketWeb.png';
+import Modal from './modal.svelte';
+
+let escojerModal = false;
+
+const abrirModal = () => {
+    escojerModal = true;
+}
+const cerrarModal = () =>{
+    escojerModal = false;
+}
 </script>
 <header class="contenedor">
     <div class="logo">
-        <a href="/"><img src={Logo} alt=""></a>   
+        <a href="/"><img src={Logo} alt=""></a>  
+       
     </div>
-    <i class="fa-solid fa-user"></i>
+    <button type="button" class="fa-solid fa-user" on:click={abrirModal}> </button> 
+
+      
     <div class="boton">
         <button><a href="/quesomos">Quienes somos</a></button>
         <button><a href="/planes">Planes</a></button>
@@ -15,6 +28,9 @@ import Logo from '../lib/IMG/MarketWeb.png';
     
     </div>
 </header>
+<Modal abierto={escojerModal} titulo="Login" cerrar={cerrarModal}>
+    <a href="">Olvido la contarseña</a>
+</Modal>  
 <style>
     .contenedor
     {
@@ -47,14 +63,18 @@ import Logo from '../lib/IMG/MarketWeb.png';
         position: absolute;
         color: #628C88;
         font-size: 50px;
-        right: 5%;
-        top: 10%;
+        right: 4%;
+        top: 5%;
+        border: transparent;
+        margin:5px;
+        padding: 12px;
     }
     .boton
     {
         position: absolute;
         bottom: 30%;
         left: 20rem;
+        
     }
     button
     {
@@ -63,7 +83,7 @@ import Logo from '../lib/IMG/MarketWeb.png';
         font-size: 15px;
         background: transparent;
         border-radius:50px;
-        border: solid 0.5px #628C88;
+        border: solid 0.5px transparent;
         color: #628C88;
     }
     a
