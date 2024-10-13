@@ -28,7 +28,7 @@ const cerrarModal = () =>{
     
     </div>
 </header>
-<Modal abierto={escojerModal} titulo="Login" cerrar={cerrarModal}>
+<Modal abierto={escojerModal} titulo="LOGIN" cerrar={cerrarModal}>
     <a href="">Olvido la contarseña</a>
 </Modal>  
 <style>

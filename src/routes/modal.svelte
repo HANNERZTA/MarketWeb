@@ -80,4 +80,8 @@
         color: white;
         margin: 10px;
     }   
+    h2
+    {
+        text-align: center;
+    }
 </style>
