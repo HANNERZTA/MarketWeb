@@ -48,7 +48,10 @@
     .container {
         display: flex;
     }
-    .tarjetas {
+    .container .tarjetas {
+
+        position: relative;
+        z-index: 2;
         background: linear-gradient(
             45deg,
             #cde8e8 0%,
@@ -60,7 +63,7 @@
         text-align: center;
         border-radius: 10px;
         box-shadow: 5px 5px 20px black;
-        position: relative;
+        flex-direction: column;
     }
     .foto {
         margin: 0 auto;
@@ -73,16 +76,7 @@
     p {
         margin: 20px;
     }
-    .redes {
-        text-align: center;
-        position: absolute;
-        right: 0%;
-        top: 3%;
-        display: none;
-        background: rgba(184, 190, 186, 0.432);
-        width: 40px;
-        border-radius: 10px;
-    }
+    
     i {
         width: 50%;
         margin: 0 auto;
@@ -90,9 +84,22 @@
         margin: 5px;
         color: #6b6b6b;
     }
-
+    .container .tarjetas .redes
+    {
+        position: absolute;  
+        z-index: 1; 
+        text-align: center;
+        right: 0%;
+        top: 3%;
+        background: rgba(184, 190, 186, 0.432);
+        width: 40px;
+        transition: .5s;
+        opacity: 0;
+    }
     .tarjetas:hover .redes
     {
-        display: block;
+        right: -50px;
+        border-radius: 0 10px 10px 0;
+        opacity: 30;
     }
 </style>
