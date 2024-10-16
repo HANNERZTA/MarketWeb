@@ -1,5 +1,5 @@
 <script>
-import Logo from '../lib/IMG/MarketWeb.png';
+import Logo from '../lib/IMG/logo_header.png';
 import Modal from './modal.svelte';
 
 let escojerModal = false;
@@ -28,7 +28,7 @@ const cerrarModal = () =>{
     
     </div>
 </header>
-<Modal abierto={escojerModal} titulo="LOGIN" cerrar={cerrarModal}>
+<Modal abierto={escojerModal}  cerrar={cerrarModal}>
     <a href="">Olvido la contarseña</a>
 </Modal>  
 <style>
