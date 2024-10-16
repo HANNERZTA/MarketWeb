@@ -1,1 +1,4 @@
-<h1>inicio</h1>
+<script>
+    import Titulo from './titulo.svelte';
+</script>
+<Titulo />
