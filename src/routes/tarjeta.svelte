@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
     <div class="tarjetas">
         <div class="redes">
             <i class="fa-brands fa-square-facebook"></i>
@@ -42,13 +42,17 @@
             animi labore quasi!
         </p>
     </div>
-</div>
+</section>
 
 <style>
     .container {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
     }
-    .container .tarjetas {
+    .tarjetas {
 
         position: relative;
         z-index: 2;
@@ -58,19 +62,18 @@
             #628c88 50%,
             #cde8e8 100%
         );
-        width: 25%;
-        margin: 5%;
+        width: 350px;
+        margin: 30px;
         text-align: center;
         border-radius: 10px;
         box-shadow: 5px 5px 20px black;
-        flex-direction: column;
     }
     .foto {
         margin: 0 auto;
         margin-top: 20px;
         background: black;
         width: 50%;
-        height: 130px;
+        height: 170px;
         border-radius: 50%;
     }
     p {
@@ -84,7 +87,7 @@
         margin: 5px;
         color: #6b6b6b;
     }
-    .container .tarjetas .redes
+    .tarjetas .redes
     {
         position: absolute;  
         z-index: 1; 
@@ -98,7 +101,7 @@
     }
     .tarjetas:hover .redes
     {
-        right: -50px;
+        right: -40px;
         border-radius: 0 10px 10px 0;
         opacity: 30;
     }

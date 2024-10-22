@@ -6,12 +6,10 @@
 
 <body>
 	<div class="app">
-		<Header/>
 		<main>
+			<Header/>
 			<slot />
 		</main>
-		
-	
 	</div>
 </body>
 <style>

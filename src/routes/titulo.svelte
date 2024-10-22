@@ -3,17 +3,32 @@
 </script>
 <div class="container">
     <div class="box">
-        <img src={Img} alt="">
-    </div>
-    <div class="box">
         <h1 class="titulo">Creación de diseño web y marketing</h1>
+    </div>
+    <div class="box2">
+        <img src={Img} alt="">
     </div>
 </div>
 <style>
     .container
     {
-        display: flex;
-        margin: 5%;
+        display:block;
+        position: relative;
+        height: 500px;
+    }
+    .container .box
+    {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+       
+    }
+    .container .box2
+    {
+        position: absolute;
+        left: 30%;
+        top: 30%;
+       
     }
     .titulo
     {

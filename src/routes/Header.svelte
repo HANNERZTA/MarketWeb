@@ -1,7 +1,7 @@
 <script>
 import Logo from '../lib/IMG/logo_header.png';
 import Modal from './modal.svelte';
-
+import Menu from './menu.svelte';
 let escojerModal = false;
 
 const abrirModal = () => {
@@ -11,35 +11,28 @@ const cerrarModal = () =>{
     escojerModal = false;
 }
 </script>
-<header class="contenedor">
+<div class="contenedor">
     <div class="logo">
         <a href="/"><img src={Logo} alt=""></a>  
        
     </div>
-    <button type="button" class="fa-solid fa-user" on:click={abrirModal}> </button> 
-
-      
-    <div class="boton">
-        <button><a href="/quesomos">Quienes somos</a></button>
-        <button><a href="/planes">Planes</a></button>
-        <button><a href="/mision">Misión y Visón</a></button>
+    <div class="login">
+        <button type="button" class="fa-solid fa-user" on:click={abrirModal}> </button> 
     </div>
-    <div class="menu">
-    
-    </div>
-</header>
+    <Menu />
+    <div class="menu"></div>
+</div>
 <Modal abierto={escojerModal}  cerrar={cerrarModal}>
     <a href="">Olvido la contarseña</a>
 </Modal>  
+
 <style>
     .contenedor
     {
         position: relative;
-        width: 100%;
-        height: 50vh;
+        height: 300px;
         background: linear-gradient(-45deg,#628C88,#CDE8E8,#CDE8E8);
-        overflow: hidden;
-
+        display: flex;
     }
     .menu
     {
@@ -61,20 +54,13 @@ const cerrarModal = () =>{
     .fa-solid
     {
         position: absolute;
-        color: #628C88;
-        font-size: 50px;
+        color: #CDE8E8;
+        font-size: 70px;
         right: 4%;
-        top: 5%;
+        top: 6%;
         border: transparent;
         margin:5px;
         padding: 12px;
-    }
-    .boton
-    {
-        position: absolute;
-        bottom: 30%;
-        left: 20rem;
-        
     }
     button
     {
@@ -84,11 +70,6 @@ const cerrarModal = () =>{
         background: transparent;
         border-radius:50px;
         border: solid 0.5px transparent;
-        color: #628C88;
-    }
-    a
-    {
-        text-decoration: none;
         color: #628C88;
     }
     button:hover
@@ -104,6 +85,13 @@ const cerrarModal = () =>{
         }
         100%{
             background-position-x: 1000px;
+        }
+    }
+    @media (max-width: 850px)
+    {
+        .contenedor
+        {
+            height: 250px;
         }
     }
     
