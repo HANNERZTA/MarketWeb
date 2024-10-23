@@ -100,4 +100,19 @@
             margin: 0;
         }
     }
+    @media(max-width: 450px)
+    {
+        a{
+            font-size: 15px;
+        }
+    }
+    @media (max-width: 400px)
+    {
+        a
+        {
+            font-size: 10px;
+        }
+
+    }
+    
 </style>

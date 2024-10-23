@@ -14,7 +14,6 @@
     {
         display:block;
         position: relative;
-        height: 500px;
     }
     .container .box
     {
@@ -49,6 +48,23 @@
     @keyframes bgText {
         to {
             background-position: 200% center;    
+        }
+    }
+    @media(max-width: 850px)
+    {
+        .box2
+        {
+            display: none;
+        }
+    }
+    @media (max-width: 400px){
+        .titulo{
+            font-size: 3rem;
+        }
+    }
+    @media(max-width: 300px){
+        .titulo{
+            font-size: 2rem;
         }
     }
 </style>
